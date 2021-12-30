@@ -33,20 +33,8 @@ ASCII_TO_REMOVE=[9]\
                +[i for i in range(91, 95)]\
                +[i for i in range(96, 97)]\
                +[i for i in range(123, 127)]
-
 CHR_TO_REMOVE = [chr(n) for n in ASCII_TO_REMOVE]
 
-# # CHR_TO_REMOVE=''
-# # for n in ASCII_TO_REMOVE:
-# #     CHR_TO_REMOVE += chr(n)
-# print(CHR_TO_REMOVE)
-#
-# oldstr="dslkjfhofew**23_-%%^&*sdklf"
-# print(oldstr)
-# newstr = ''.join((filter(lambda x: x not in CHR_TO_REMOVE, oldstr)))
-# print(newstr)
-#
-# exit()
 
 class TOCProcessor():
     def __init__(self, input_f_path, output_f_path):
@@ -70,7 +58,6 @@ class TOCProcessor():
                 self.file_data.append(line.strip())
                 # line_num+=1
                 line=in_f.readline()
-
 
 
     def get_toc_line_num(self, identifier_key, enforce_from_zero=False):
@@ -108,14 +95,9 @@ class TOCProcessor():
     def process_heading(self, line_num, h_level):
         # print("debug:: heading found at", line_num, h_level, self.file_data[line_num])
         line=self.file_data[line_num][len(HEADING_HEADER[h_level]):]
-
         line_no_l = self.remove_link(line)
-
         heading_link, heading_link_dup = self.process_string_to_link(line_no_l)
         disp_txt = self.process_string_to_disp_txt(line_no_l)
-        # has line in format: [...](...)
-        # if line
-
 
         return disp_txt, heading_link, heading_link_dup
 
@@ -142,7 +124,7 @@ class TOCProcessor():
 
     def process_string_to_disp_txt(self, text):
 
-        # While maybe additional processing is not needed
+        # While... maybe additional processing is not needed
 
         return text
 
@@ -222,13 +204,13 @@ class TOCProcessor():
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='This is a TOC processor for github')
     parser.add_argument('--input-file', metavar='path', type=str, required=True,
-                help='Set the input file')
+                help='Set the input file.')
     parser.add_argument('--output-file', metavar='path', type=str, required=True,
-                help='Set the output file')
+                help='Set the output file.')
 
     parser.add_argument('--location-identifier', metavar='string', type=str, required=False,
                 default="[TOC]",
-                help='Set the search string for TOC subsitution location')
+                help='Set the search string for TOC subsitution location.')
 
     args = parser.parse_args()
 
@@ -274,17 +256,3 @@ if __name__=='__main__':
     processor.build_doc_data(toc_start_line, toc_end_line)
 
     processor.write_to_file()
-
-
-    # for var in processor.toc_data:
-    #     # print("debug::: got", var, "::", processor.file_data[var[0]])
-    #     print(" got", var)
-    #     # pass
-
-    #
-    # print("will be inserted at line:", toc_start_line,"-->", toc_end_line)
-    # print()
-    # print()
-    # print()
-    # for num, line in enumerate(processor.data_to_write):
-    #     print(num+1, line)
