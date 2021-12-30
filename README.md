@@ -1,11 +1,38 @@
-# qlin_control ROS package
+# Markdown TOC Converter
 
-Launch definition and kinematics scripts for pathology tele-operation
 
 [comment]: # (TOC generator marker start)
-- [qlin_control ROS package](#qlin_control-ros-package)
-  * [1. Directory Structure](#1-directory-structure)
+- [Markdown TOC Converter](#markdown-toc-converter)
+  * [About](#about)
+  * [Dependency](#dependency)
+  * [Example](#example)
+  * [License](#license)
 
 [comment]: # (TOC generator marker end)
 
-## 1. Directory Structure
+## About
+
+This is a simple Markdown Table of Content processor
+
+
+## Dependency
+
+There is no additional package requirement other then the python base package
+```shell
+$ python
+```
+Currently, the package has only been tested with version 3.8.
+
+
+## Example
+
+- One example given here is to convert this README file.
+
+Simply run the command:
+```shell
+$ sh convert_this.sh
+```
+
+## License
+
+MIT

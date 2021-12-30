@@ -1,11 +1,7 @@
 import argparse
-
 import os
-from collections import OrderedDict
 
 PKG_NAME="TOCProcessor"
-
-
 
 GENERATED_MARKING_START='[comment]: # (TOC generator marker start)'
 GENERATED_MARKING_END='[comment]: # (TOC generator marker end)'
