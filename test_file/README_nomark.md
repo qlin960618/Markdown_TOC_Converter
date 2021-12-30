@@ -2,23 +2,21 @@
 
 Launch definition and kinematics scripts for pathology tele-operation
 
-
-[comment]: # (TOC generator marker start)
 - [qlin_control ROS package](#qlin_control-ros-package)
   * [1. Directory Structure](#1-directory-structure)
      * [a. launch](#a-launch)
-        * [qlin_teleoperation.launch](#qlin_teleoperationlaunch)
-        * [qlin_teleoperation_joystick.launch](#qlin_teleoperation_joysticklaunch)
-        * [qlin_replay.launch](#qlin_replaylaunch)
-        * [qlin_ui_replay.launch (In progress)](#qlin_ui_replaylaunch-in-progress)
+        * [<a href="launch/qlin_teleoperation.launch">qlin_teleoperation.launch</a>](#qlin_teleoperationlaunch)
+        * [<a href="launch/qlin_teleoperation_joystick.launch">qlin_teleoperation_joystick.launch</a>](#qlin_teleoperation_joysticklaunch)
+        * [<a href="launch/qlin_replay.launch">qlin_replay.launch</a>](#qlin_replaylaunch)
+        * [<a href="launch/qlin_ui_replay.launch">qlin_ui_replay.launch</a> (In progress)](#qlin_ui_replaylaunch-in-progress)
      * [b. robots](#b-robots)
         * [json parameters](#json-parameters)
-           * [~~denso_vs050_pathology_arm.json~~ (Incorrect version)](#denso_vs050_pathology_armjson-incorrect-version)
-           * [denso_vs050_denso_11U473.json, denso_vs050_denso_11U483.json](#denso_vs050_denso_11u473json-denso_vs050_denso_11u483json)
-           * [denso_vs050_official_arm.json](#denso_vs050_official_armjson)
+           * [<del><a href="robots/denso_vs050_pathology_arm.json">denso_vs050_pathology_arm.json</a></del> (Incorrect version)](#denso_vs050_pathology_armjson-incorrect-version)
+           * [<a href="robots/denso_vs050_denso_11U473.json">denso_vs050_denso_11U473.json</a>, <a href="robots/denso_vs050_denso_11U483.json">denso_vs050_denso_11U483.json</a>](#denso_vs050_denso_11u473json-denso_vs050_denso_11u483json)
+           * [<a href="robots/denso_vs050_official_arm.json">denso_vs050_official_arm.json</a>](#denso_vs050_official_armjson)
         * [Import Wrapper](#import-wrapper)
-           * [~~VS050RobotDH_pathology.py~~ (No longer applicable)](#vs050robotdh_pathologypy-no-longer-applicable)
-           * [VS050Robot_pathology.py](#vs050robot_pathologypy)
+           * [<del><a href="robots/VS050RobotDH_pathology.py">VS050RobotDH_pathology.py</a></del> (No longer applicable)](#vs050robotdh_pathologypy-no-longer-applicable)
+           * [<a href="robots/VS050Robot_pathology.py">VS050Robot_pathology.py</a>](#vs050robot_pathologypy)
      * [c. scripts](#c-scripts)
      * [d. src](#d-src)
   * [2. Components Explain](#2-components-explain)
@@ -26,9 +24,6 @@ Launch definition and kinematics scripts for pathology tele-operation
      * [b. sss_operator_side_receiver_udp_node](#b-sss_operator_side_receiver_udp_node)
      * [c. qlin_patient_side_manager_node.py [or] sss_patient_side_manager_node](#c-qlin_patient_side_manager_nodepy-or-sss_patient_side_manager_node)
      * [d. moonshot_drill_robot_node](#d-moonshot_drill_robot_node)
-
-[comment]: # (TOC generator marker end)
-
 
 ## 1. Directory Structure
 
@@ -43,7 +38,7 @@ In the following figure dependency and data flow direction are labeled as follow
 #### [qlin_teleoperation.launch](launch/qlin_teleoperation.launch)
 
 
-This launch file is the main launch mode for the teleoperation mode of the pathology robot. Using the UDP connection with Master Interface exist locally or on remote computer for operation. A more detail description of the each components will be discussed below in the later section.
+This launch file is the main launch mode for the teleoperation mode of the pathology robot. Using the UDP connection with Master Interface exist locally or on remote computer for operation. A more detail description of the each components will be discussed below in the later section.  
 
 ![Normal Components](media/qlin_teleoperation_diagram.png)
 
@@ -59,9 +54,9 @@ This launch mode takes an existing .mat record and run through the replay. It is
 
 #### [qlin_ui_replay.launch](launch/qlin_ui_replay.launch) (In progress)
 
-This launch mode takes an existing trajectory.mat record and run through the replay. It is still done through a similar kinematic node to ensure all constrain is still enforced.
+This launch mode takes an existing trajectory.mat record and run through the replay. It is still done through a similar kinematic node to ensure all constrain is still enforced. 
 
-(working of which is very much like the base kinematic node. not yet implemented, but the following iteration robot kinematic interface will be replaced with module read data from the logged data of other teleoperation.)
+(working of which is very much like the base kinematic node. not yet implemented, but the following iteration robot kinematic interface will be replaced with module read data from the logged data of other teleoperation.) 
 
 
 
@@ -122,7 +117,7 @@ Kinematics calculation for the tele-operation. The node takes advantage of the R
 
 The node share basically identical functionality in ROS perspective compare to the qlin_joystick_interface.py. With its diagram below
 
-![](media/operator_side_receiver_diagram.png)
+ ![](media/operator_side_receiver_diagram.png)
 
 
 

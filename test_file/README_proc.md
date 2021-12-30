@@ -7,18 +7,18 @@ Launch definition and kinematics scripts for pathology tele-operation
 - [qlin_control ROS package](#qlin_control-ros-package)
   * [1. Directory Structure](#1-directory-structure)
      * [a. launch](#a-launch)
-        * [qlin_teleoperation.launch](#qlin_teleoperationlaunch)
-        * [qlin_teleoperation_joystick.launch](#qlin_teleoperation_joysticklaunch)
-        * [qlin_replay.launch](#qlin_replaylaunch)
-        * [qlin_ui_replay.launch (In progress)](#qlin_ui_replaylaunch-in-progress)
+        * [<a href="launch/qlin_teleoperation.launch">qlin_teleoperation.launch</a>](#qlin_teleoperationlaunch)
+        * [<a href="launch/qlin_teleoperation_joystick.launch">qlin_teleoperation_joystick.launch</a>](#qlin_teleoperation_joysticklaunch)
+        * [<a href="launch/qlin_replay.launch">qlin_replay.launch</a>](#qlin_replaylaunch)
+        * [<a href="launch/qlin_ui_replay.launch">qlin_ui_replay.launch</a> (In progress)](#qlin_ui_replaylaunch-in-progress)
      * [b. robots](#b-robots)
         * [json parameters](#json-parameters)
-           * [~~denso_vs050_pathology_arm.json~~ (Incorrect version)](#denso_vs050_pathology_armjson-incorrect-version)
-           * [denso_vs050_denso_11U473.json, denso_vs050_denso_11U483.json](#denso_vs050_denso_11u473json-denso_vs050_denso_11u483json)
-           * [denso_vs050_official_arm.json](#denso_vs050_official_armjson)
+           * [<del><a href="robots/denso_vs050_pathology_arm.json">denso_vs050_pathology_arm.json</a></del> (Incorrect version)](#denso_vs050_pathology_armjson-incorrect-version)
+           * [<a href="robots/denso_vs050_denso_11U473.json">denso_vs050_denso_11U473.json</a>, <a href="robots/denso_vs050_denso_11U483.json">denso_vs050_denso_11U483.json</a>](#denso_vs050_denso_11u473json-denso_vs050_denso_11u483json)
+           * [<a href="robots/denso_vs050_official_arm.json">denso_vs050_official_arm.json</a>](#denso_vs050_official_armjson)
         * [Import Wrapper](#import-wrapper)
-           * [~~VS050RobotDH_pathology.py~~ (No longer applicable)](#vs050robotdh_pathologypy-no-longer-applicable)
-           * [VS050Robot_pathology.py](#vs050robot_pathologypy)
+           * [<del><a href="robots/VS050RobotDH_pathology.py">VS050RobotDH_pathology.py</a></del> (No longer applicable)](#vs050robotdh_pathologypy-no-longer-applicable)
+           * [<a href="robots/VS050Robot_pathology.py">VS050Robot_pathology.py</a>](#vs050robot_pathologypy)
      * [c. scripts](#c-scripts)
      * [d. src](#d-src)
   * [2. Components Explain](#2-components-explain)
@@ -43,7 +43,7 @@ In the following figure dependency and data flow direction are labeled as follow
 #### [qlin_teleoperation.launch](launch/qlin_teleoperation.launch)
 
 
-This launch file is the main launch mode for the teleoperation mode of the pathology robot. Using the UDP connection with Master Interface exist locally or on remote computer for operation. A more detail description of the each components will be discussed below in the later section.
+This launch file is the main launch mode for the teleoperation mode of the pathology robot. Using the UDP connection with Master Interface exist locally or on remote computer for operation. A more detail description of the each components will be discussed below in the later section.  
 
 ![Normal Components](media/qlin_teleoperation_diagram.png)
 
@@ -122,7 +122,7 @@ Kinematics calculation for the tele-operation. The node takes advantage of the R
 
 The node share basically identical functionality in ROS perspective compare to the qlin_joystick_interface.py. With its diagram below
 
-![](media/operator_side_receiver_diagram.png)
+ ![](media/operator_side_receiver_diagram.png)
 
 
 
@@ -133,5 +133,11 @@ Currently, the two file has very similar implementation. Except for the sss_pati
 ![](media/patient_side_manager_diagram.png)
 
 ### d. moonshot_drill_robot_node
+### d. moonshot_drill_robot_node
+### d. moonshot_drill_robot_noeas
+### d. moonshot_drill_robot_noeas
+### d. moonshot_drill_robot_node
+### d. moonshot_drill_robot_noe
+### d. moonshot_drill_robot_noe
 
 ![](media/robot_driver_diagram.png)
