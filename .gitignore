@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 
-#ignore testing readme file
-/test_file
+#ignore testing readme file directory
+test_file/
