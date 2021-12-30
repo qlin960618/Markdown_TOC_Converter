@@ -164,16 +164,17 @@ class TOCProcessor():
             link = link.replace("--", '-')
 
         #garantee uniqueness
-        append_ind=1
+        append_ind=0
         for ind, entry in enumerate(self.toc_table):
             if entry[3]==link:
-                self.toc_table[ind][4] = self.toc_table[ind][3]+str(append_ind)
+                if append_ind:
+                    self.toc_table[ind][4] = self.toc_table[ind][3]+"-%d"%(append_ind)
                 append_ind+=1
 
-        if append_ind==1:
+        if append_ind==0:
             return link, link
         else:
-            return link, link+str(append_ind)
+            return link, link+"-%d"%(append_ind)
 
 
     def build_toc_data(self):
