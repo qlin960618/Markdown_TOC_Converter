@@ -3,8 +3,8 @@ import os
 
 PKG_NAME="TOCProcessor"
 
-GENERATED_MARKING_START='[comment]: # (TOC generator marker start)'
-GENERATED_MARKING_END='[comment]: # (TOC generator marker end)'
+GENERATED_MARKING_START='<!--- COMMENT TOC generator marker start -->'
+GENERATED_MARKING_END='<!--- COMMENT TOC generator marker end -->'
 
 
 YES_RESPONSE_VAR = ['Y', 'YES']
