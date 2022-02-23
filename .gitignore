@@ -94,3 +94,6 @@ dmypy.json
 test_file/
 # ignore local usage script
 local_convert*
+
+
+.idea/

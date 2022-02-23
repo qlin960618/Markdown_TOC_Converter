@@ -1,7 +1,7 @@
 # Markdown TOC Converter
 
 
-[comment]: # (TOC generator marker start)
+<!--- COMMENT TOC generator marker start -->
 - [Markdown TOC Converter](#markdown-toc-converter)
   * [About](#about)
   * [Dependency](#dependency)
@@ -9,12 +9,16 @@
   * [License](#license)
   * [Test Example](#test-example)
      * [Test Example](#test-example-1)
+     * [Duplicated Entries](#duplicated-entries)
         * [Google](#google)
         * [Google, YouTube](#google-youtube)
+     * [Duplicated Entries](#duplicated-entries-1)
+        * [Duplicated Entries](#duplicated-entries-2)
+     * [Duplicated Entries](#duplicated-entries-3)
      * [~~Strikethrough~~](#strikethrough)
      * [**Bold Text**](#bold-text)
 
-[comment]: # (TOC generator marker end)
+<!--- COMMENT TOC generator marker end -->
 
 ## About
 
@@ -23,11 +27,10 @@ This is a simple Markdown Table of Content processor
 
 ## Dependency
 
-There is no additional package requirement other then the python base package
+There is no additional package requirement other than the python base package version 3.8
 ```shell
 $ python
 ```
-Currently, the package has only been tested with version 3.8.
 
 
 ## Example
@@ -52,6 +55,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Etiam non quam lacus suspendisse. Convallis aenean et tortor at risus viverra adipiscing at. Cursus sit amet dictum sit. Adipiscing bibendum est ultricies integer quis auctor elit sed. At tempor commodo ullamcorper a. Duis convallis convallis tellus id interdum velit.
 
+### Duplicated Entries
+
+initial duplicated entries
+
 #### [Google](https://www.google.com)
 
 Test example with link
@@ -59,6 +66,18 @@ Test example with link
 #### [Google](https://www.google.com), [YouTube](https://www.youtube.com)
 
 Test example with two link
+
+### Duplicated Entries
+
+Duplicated Entries 2
+
+#### Duplicated Entries
+
+Duplicated Entries 3
+
+### Duplicated Entries
+
+Duplicated Entries 4
 
 ### ~~Strikethrough~~
 
