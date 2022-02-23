@@ -82,3 +82,5 @@ Duplicated Entries 4
 ### ~~Strikethrough~~
 
 ### **Bold Text**
+
+google-site-verification: googlec8b877b29bbad5cc.html
